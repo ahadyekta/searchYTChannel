@@ -11347,7 +11347,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var store = (0, _store2.default)({
 	channels: [],
 	inputs: {
-		API_KEY: 'AIzaSyDUA6YcNXn7CUKCgVKDfDHIVeEgHKaOBK4',
+		API_KEY: '', //for default value you can place your api key here
 		q: ''
 	},
 	errors: [],
@@ -25133,7 +25133,7 @@ var TopUi = exports.TopUi = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'inputs' },
                 _react2.default.createElement(
                     'form',
                     null,
@@ -25143,9 +25143,15 @@ var TopUi = exports.TopUi = function (_React$Component) {
                         _react2.default.createElement(
                             'label',
                             null,
-                            'API'
+                            'API KEY '
                         ),
-                        _react2.default.createElement('input', { type: 'text', ref: 'API_KEY', defaultValue: this.props.API_KEY })
+                        _react2.default.createElement('input', { type: 'text', ref: 'API_KEY', defaultValue: this.props.API_KEY }),
+                        ' ',
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'https://developers.google.com/places/web-service/get-api-key' },
+                            'How to get it?'
+                        )
                     ),
                     _react2.default.createElement(
                         'p',
@@ -25153,14 +25159,14 @@ var TopUi = exports.TopUi = function (_React$Component) {
                         _react2.default.createElement(
                             'label',
                             null,
-                            'Search'
+                            'Search for '
                         ),
-                        _react2.default.createElement('input', { type: 'text', ref: 'q', defaultValue: this.props.q })
-                    ),
-                    _react2.default.createElement(
-                        'a',
-                        { href: '#', onClick: this.searchQuery },
-                        'search'
+                        _react2.default.createElement('input', { type: 'text', ref: 'q', defaultValue: this.props.q }),
+                        _react2.default.createElement(
+                            'button',
+                            { href: '#', onClick: this.searchQuery },
+                            'Search'
+                        )
                     )
                 )
             );
@@ -25777,15 +25783,16 @@ var BodyUi = exports.BodyUi = function (_React$Component) {
                         )
                     );
                 }),
-                _react2.default.createElement(
+                Object.keys(this.props.channels).length ? _react2.default.createElement(
                     "p",
                     null,
+                    " ",
                     _react2.default.createElement(
                         "a",
                         { href: "#", onClick: this.searchQuery },
                         "Load more"
                     )
-                )
+                ) : null
             );
         }
     }]);
