@@ -1,0 +1,39 @@
+{
+  "name": "search-youtube",
+  "version": "1.0.0",
+  "description": "better search for youtube channels and videos",
+  "main": "index.js",
+  "scripts": {
+    "start":  "./node_modules/.bin/webpack-dev-server",
+    "build":  "./node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/ahadyekta/searchYoutube.git"
+  },
+  "keywords": [
+    "youtube"
+  ],
+  "author": "Ahad Nemati",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/ahadyekta/searchYoutube/issues"
+  },
+  "homepage": "https://gitlab.com/ahadyekta/searchYoutube#README",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
